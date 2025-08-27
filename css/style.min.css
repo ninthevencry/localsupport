@@ -374,7 +374,6 @@ a {
 
 .blog-share-wrapper {
   float: right;
-  display: inline-block;
   margin: 0 -5px; }
   .blog-share-wrapper .blog-share {
     padding: 0 5px;
