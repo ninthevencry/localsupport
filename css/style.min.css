@@ -243,10 +243,10 @@ a {
   border-top-right-radius: 5px;
   margin-bottom: 0;
   overflow: hidden;
-  min-height: 500px; }
+  min-height: 300px; }
   @media (min-width: 1024px) {
     .jumbotron {
-      min-height: 80vh; } }
+      min-height: 30vh; } }
   .jumbotron .container {
     position: relative;
   top: -240px; }

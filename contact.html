@@ -61,6 +61,24 @@
             </div>
             <!-- End of Section Title -->
             <div class="row">
+
+<div>
+    <form id="emailForm">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+  <br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  <br>
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" required></textarea>
+  <br>
+  <button type="submit">Send Email</button>
+</form>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+</div>
+
                 <!-- Contact Form Holder -->
                 <div class="col-md-8 offset-md-2 contact-form-holder mt-4">
                     <form method="post" name="contact-us" action="mailto:noreply@eyeglasssupport.co.uk?subject=Support Enquiry" enctype="text/plain">
@@ -82,10 +100,19 @@
                             </div>
                         </div>
                     </form>
-                    <div id="form-message-warning"></div>
-                    <div id="form-message-success">
-                        Your message was sent, thank you!
-                    </div>
+                    <script>
+                        emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
+
+                        document.getElementById("emailForm").addEventListener("submit", function(event) {
+                            event.preventDefault();
+                            emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+                            .then(function() {
+                                alert("Email sent successfully!");
+                            }, function(error) {
+                                alert("Failed to send email: " + error.text);
+                            });
+                        });
+                    </script>
                 </div>
                 <!-- End of Contact Form Holder -->
             </div>
