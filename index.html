@@ -2,421 +2,251 @@
 <html lang="en">
 
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>TopshamTech IT Support</title>
-    <meta name="description" content="Core HTML Project">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- External CSS -->
-    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="vendor/select2/select2.min.css">
-    <link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="vendor/lightcase/lightcase.css">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-    <link href="https://file.myfontastic.com/7vRKgqrN3iFEnLHuqYhYuL/icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
-     <!--
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
--->
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topsham Tech | Independent IT Support & Advice</title>
+    <meta name="description"
+        content="Friendly, local independent IT support and advice for individuals and small businesses. Over 35 years of experience resolving computer, network, security, and website issues.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body data-spy="scroll" data-target="#navbar-nav-header" class="static-layout">
-	<div class="boxed-page">
-    <!--
-		<nav id="gtco-header-navbar" class="navbar navbar-expand-lg py-4">
-    <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="/">
-            <span class="lnr"></span>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav-header" aria-controls="navbar-nav-header" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="lnr lnr-menu"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar-nav-header">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#gtco-features">Profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#blog">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#services">Services</a>
-                </li>-->
-                <!--
-                <li class="nav-item">
-                    <a class="nav-link" href="#portfolio">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#pricing">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-  
-            </ul>
+
+<body>
+
+    <!-- PRELOADER OVERLAY -->
+    <div id="loader" class="loader-overlay">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <img src="./images/techlogo.png" alt="logo" width="100">
+                <span class="logo-text">TOPSHAM<span class="cyan-accent">TECH</span></span>
+            </div>
+            <div class="loader-status">
+                <span class="status-terminal">SYSTEM: INITIALIZING HOLOGRAPHIC PIPELINE...</span>
+                <span class="status-subtext" id="loader-subtext">Loading neural matrix frames [0/240]</span>
+            </div>
+            <div class="loader-progress-bar-container">
+                <div class="loader-progress-bar" id="loader-progress"></div>
+            </div>
+            <div class="loader-percentage" id="loader-percentage">0%</div>
         </div>
     </div>
-    
-</nav>		-->
-<div class="jumbotron d-flex align-items-center" style="background-image: url(img/TopshamTech.png)">
-</div><!--
-  <div class="container text-center">
-    <h1 class="display-2 mb-4">Topsham Tech IT Support & Advice</h1>
-    <p>
-      Welcome to Topsham Tech IT Support & Advice - friendly local IT support and advice services.
-    </p>
-  </div>
-</div>		
 
-<div class="center-div">
-    <h1 class="display-2 mb-4">Do you struggle with Tech?</h1>
-    <p>
-      <b>If you find it hard to navigate the world of technology I'm here to help. I can help with simple things like setting up your devices and troubleshooting issues. All the way up to training on where to start coding and advice on security for your business.</b>
-    </p>
-  </div>
--->
-
-		<!-- Features Section-->
-<section id="gtco-features" class="bg-white">
-    <div class="container">
-        <div class="section-content">
-            <!-- Section Title -->
-            <div class="title-wrap">
-                <h2 class="section-title">
-                    Independent IT support and advice
-                </h2>
-                <p class="section-sub-title">I'm an independent IT consultant aiming to provide support and advice to individuals and small businesses</p>
-                <p>With over 35 years experience I can assist you with a wide range of support and advice. So whether you are just struggling to keep up with technology and just want some simple friendly advice or you are thinking of setting up a new online business and don't know where to start, I'm here to help.</p>
-            </div>
-            <!-- End of Section Title -->
-            <div class="row">
-                <!-- Features Holder-->
-                <div class="col-md-12 features-holder">
-                    <div class="row">
-                        <!-- Features Item -->
-                        <div class="col-md-4 col-sm-6 feature-item item mb-3 mb-3 text-center">
-                            <div class="my-4">
-                                <i class="lnr lnr-cog fs-40"></i>
-                            </div>
-                            <h4>IT Support</h4>
-                            <p>Support in setup and resolving issues</p>
-                        </div>
-                        <!-- End of Feature Item -->
-                        <!-- Features Item -->
-                        <div class="col-md-4 col-sm-6 feature-item item mb-3 text-center">
-                            <div class="my-4">
-                                <i class="lnr lnr-bubble fs-40"></i>
-                            </div>
-                            <h4>Advise</h4>
-                            <p>Providing expert advice on IT solutions both domestic and in business</p>
-                        </div>
-                        <!-- End of Feature Item -->
-                        <!-- Features Item -->
-                        <div class="col-md-4 col-sm-6 feature-item item mb-3 text-center">
-                            <div class="my-4">
-                                <i class="lnr lnr-thumbs-up fs-40"></i>
-                            </div>
-                            <h4>Keep it Simple</h4>
-                            <p>My mission is to provide clear and straightforward advice without the jargon</p>
-                        </div>
-                        <!-- End of Feature Item -->
-
-                        <!-- Features Item -->
-                        <div class="col-md-4 col-sm-6 feature-item item mb-3 text-center">
-                            <div class="my-4">
-                                <i class="lnr lnr-lock fs-40"></i>
-                            </div>
-                            <h4>Security</h4>
-                            <p>I can help advise on the do's and don'ts and help ensure you and your family or business stays safe</p>
-                        </div>
-                        <!-- End of Feature Item -->
-
-                        <!-- Features Item -->
-                        <div class="col-md-4 col-sm-6 feature-item item mb-3 text-center">
-                            <div class="my-4">
-                                <i class="lnr lnr-database fs-40"></i>
-                            </div>
-                            <h4>Data protection</h4>
-                            <p>Assistance on setup and advice on how to protect your data and keep it secure</p>
-                        </div>
-                        <!-- End of Feature Item -->
-
-                        <!-- Features Item -->
-                        <div class="col-md-4 col-sm-6 feature-item item mb-3 text-center">
-                            <div class="my-4">
-                                <i class="lnr lnr-laptop-phone fs-40"></i>
-                            </div>
-                            <h4>Websites</h4>
-                            <p>Best practices for creating and maintaining a website</p>
-                        </div>
-                        <!-- End of Feature Item -->
-                    </div>
-                    <div>
-                        <div class="title-wrap">
-                            <h3><a href="contact.html">Click here to contact me</a></h3>
-                            <p>or Email me at <a href="mailto:info@topshamtech.co.uk?subject=Support Enquiry">info@topshamtech.co.uk</a></p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End of Features Holder-->
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End of Features Section-->		
- 
-		<!-- Blog Section -->
-<section id="gtco-blog" class="bg-grey">
-    <div class="container">
-        <div class="section-content">
-            <div class="title-wrap mb-5">
-                <h2 class="section-title">Latest news and views</h2>
-                <p class="section-sub-title">Technology constantly moves at a fast pace and keeping up is crucial. Here are my latest thoughts and insights.</p>
-            </div>
-            <div class="row">
-                <div class="col-md-12 blog-holder">
-                    <div class="row">
-                        <div class="col-md-4 blog-item-wrapper">
-                            <div class="blog-item">
-                                <div class="blog-img">
-                                    <a href="blog-1.html"><img src="img/blog-1.jpg" alt=""></a>
-                                </div>
-                                <div class="blog-text">
-                                    <div class="blog-title">
-                                        <a href="blog-1.html"><h4>AI - The end to software development?</h4></a>
-                                    </div>
-                                    <div class="blog-meta">
-                                        <p class="blog-date">Feb 2026</p>
-                                    </div>
-                                    <div class="blog-desc">
-                                        <p>Are you thinking of starting a career in software engineering but concerned about it's future and how AI will affect the industry? As an ex-software developer and IT manager here are my thoughts based on my experience.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 blog-item-wrapper">
-                            <div class="blog-item">
-                                <div class="blog-img">
-                                    <a href="blog-3.html"><img src="img/blog-4.jpg" alt=""></a>
-                                </div>
-                                <div class="blog-text">
-                                    <div class="blog-title">
-                                        <a href="blog-3.html"><h4>Staying safe online</h4></a>
-                                    </div>
-                                    <div class="blog-meta">
-                                        <p class="blog-date">Mar 2026</p>
-                                    </div>
-                                    <div class="blog-desc">
-                                        <p>Are you worried about staying safe online? Everyday there is a new threat where hackers are finding new ways to exploit vulnerabilities. Here are my top tips to help you stay safe:</p>
-                                        <ul>
-                                            <li>Use strong, unique passwords for each of your accounts.</li>
-                                            <li>Enable two-factor authentication wherever possible.</li>
-                                            <li>Be cautious of phishing emails and suspicious links.</li>
-                                            <li>Keep your software and devices up to date with the latest security patches.</li>
-                                            <li>Avoid accessing public Wi-Fi networks.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 blog-item-wrapper">
-                            <div class="blog-item">
-                                <div class="blog-img">
-                                    <a href="blog-2.html"><img src="img/blog-3.jpg" alt=""></a>
-                                </div>
-                                <div class="blog-text">
-                                    <div class="blog-title">
-                                        <a href="blog-2.html"><h4>Online fraud awareness</h4></a>
-                                    </div>
-                                    <div class="blog-meta">
-                                        <p class="blog-date">Dec 2025</p>
-                                    </div>
-                                    <div class="blog-desc">
-                                        <p>Do you worry about losing money to online fraudsters and scams? With the new addition of AI fraudsters continue to find more sophisticated ways to trap people. </p>
-                                        <p>Here's an article that explains the latest trends in online fraud and how to protect yourself.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End of Blog Section -->				
-<!-- Pricing Section 
-<section id="pricing" class="bg-grey">
-    <div class="container">
-        <div class="section-content">
-            <div class="title-wrap">
-                <h2 class="section-title">Pricing</h2>
-                <p>As an independent consultant, I can offer flexible pricing options to suit your needs.</p>
-                <p>The prices below are subject are a general guide and may vary depending on the specifics of your request.</p>
-                <p>A full quote can be provided after the initial consultation.</p>
-            </div>
-            <div class="card-deck mb-3 text-center">
-                <div class="price-box card mb-4 box-shadow">
-                    <div class="card-header p-4">
-                        <h6 class="mb-0 text-orange font-weight-bold">Private domestic support</h6>
-                        <p class="mb-0">For non-business related queries</p>
-                    </div>
-                    <div class="card-body p-4">
-                        <p>Initial consultation is free of charge</p><p>Support items can include:</p>
-                        <ul class="price-box-list list-unstyled mt-3 mb-4">
-                            <li>Troubleshooting issues</li>
-                            <li>Restoring lost data</li>
-                            <li>Keeping Safe online</li>
-                            <li>Guidance on how to use technology</li>
-                        </ul>
-
-                        <h3 class="card-title pricing-card-title mb-0 font-weight-bold">£45</h3>
-                        <p>per hour for on-going support based on complexity</p>
-                        <a href="contact.html?Subect=HomeSupport" class="btn btn-block btn-secondary btn-cyan mt-4">Contact Me</a>
-                    </div>
-                </div>
-
-                <div class="price-box card mb-4 box-shadow">
-                    <div class="card-header p-4">
-                        <h6 class="mb-0 text-cyan font-weight-bold">Websites or Learning to Code</h6>
-                        <p class="mb-0">Training and assistance</p>
-                    </div>
-                    <div class="card-body p-4">
-                        <p>Initial consultation is free of charge</p><p>Support items can include:</p>
-                        <ul class="price-box-list list-unstyled mt-3 mb-4">
-                            <li>Help with setting up a website</li>
-                            <li>Advise on security</li>
-                            <li>Training on how to learn coding</li>
-                            <li>Help with learning new technologies</li>
-                        </ul>
-
-                        <h3 class="card-title pricing-card-title mb-0 font-weight-bold">£55</h3>
-                        <p>per hour for on-going support based on complexity</p>
-                        <a href="contact.html?Subect=WebSupport" class="btn btn-block btn-secondary btn-cyan mt-4">Contact Me</a>
-                    </div>
-                </div>
-                <div class="price-box card mb-4 box-shadow">
-                    <div class="card-header p-4">
-                        <h6 class="mb-0 text-red font-weight-bold">Business</h6>
-                        <p class="mb-0">For Business</p>
-                    </div>
-                    <div class="card-body p-4">
-                        <p>Initial consultation is free of charge</p><p>Support items can include:</p>
-                        <ul class="price-box-list list-unstyled mt-3 mb-4">
-                            <li>Advice on security</li>
-                            <li>Installation of new hardware/software</li>
-                            <li>Guidance on how to use technology</li>
-                            <li>Web presence</li>
-                        </ul>
-                        <h3 class="card-title pricing-card-title mb-0 font-weight-bold">£75</h3>
-                        <p>per hour for on-going support based on complexity</p>
-                        <a href="contact.html?Subect=Business" class="btn btn-block btn-secondary btn-red mt-4">Contact Me</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>		
--->
-<!-- Counter Section 
-<section id="gtco-counter" class="overlay bg-fixed">
-    <div class="container">
-        <div class="section-content">
-            <div class="row">
-                <div class="col-md-3 col-sm-6 counter-item">
-                    <i class="lnr lnr-users"></i>
-                    <span class="number" data-from="0" data-to="34" data-refresh-interval="100">14</span>
-                    <h4>Clients</h4>
-                </div>
-                <div class="col-md-3 col-sm-6 counter-item">
-                    <i class="lnr lnr-briefcase"></i>
-                    <span class="number" data-from="0" data-to="32" data-refresh-interval="100">32</span>
-                    <h4>Projects</h4>
-                </div>
-                <div class="col-md-3 col-sm-6 counter-item">
-                    <i class="lnr lnr-heart"></i>
-                    <span class="number" data-from="0" data-to="38" data-refresh-interval="100">38</span>
-                    <h4>Positive Feedbacks</h4>
-                </div>
-                <div class="col-md-3 col-sm-6 counter-item">
-                    <i class="lnr lnr-rocket"></i>
-                    <span class="number" data-from="0" data-to="29" data-refresh-interval="100">29</span>
-                    <h4>Website Launch</h4>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
- End of Counter Section -->
-<footer class="mastfoot mb-3 bg-white py-4 border-top">
-    
-    <div class="inner container">
-        <div class="nav nav-mastfoot justify-content-md-end justify-content-center">
-            <a href="https://www.facebook.com/profile.php?id=61577604237710" target="_blank">
-                <img src="img/facebook-logo.png" alt="Facebook" style="width:40px; height:40px;">
+    <!-- HEADER NAVIGATION -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="./images/techlogo.png" alt="logo" width="100">
+                TOPSHAM<span class="cyan-accent">TECH</span>
             </a>
-          </div>
-
-         <div class="row">
-         	<div class="col-md-6 d-flex align-items-center justify-content-md-start justify-content-center">
-         		<p class="mb-0">&copy; 2019 Moon. All Right Reserved. Design by <a href="https://gettemplates.co" target="_blank">GetTemplates.co</a>.</p>
-         	</div>
-           
-            <div class="col-md-6">
-            	<nav class="nav nav-mastfoot justify-content-md-end justify-content-center">
-	                <a class="nav-link" href="#">
-	                	<i class="icon-facebook"></i>
-	                </a>
-	                <a class="nav-link" href="#">
-	                	<i class="icon-twitter"></i>
-	                </a>
-	                <a class="nav-link" href="#">
-	                	<i class="icon-instagram"></i>
-	                </a>
-	                <a class="nav-link" href="#">
-	                	<i class="icon-linkedin"></i>
-	                </a>
-	                <a class="nav-link" href="#">
-	                	<i class="icon-youtube"></i>
-	                </a>
-	                <a class="nav-link" href="#">
-	                	<i class="icon-pinterest"></i>
-	                </a>
-	            </nav>
+            <nav class="nav-links">
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About Me</a>
+            </nav>
+            <div class="header-actions">
+                <a href="contact.html" class="btn btn-outline btn-sm">CONTACT ME</a>
             </div>
-            
         </div>
-    </div>
-</footer>	</div>
-	
-</div>
-	<!-- External JS -->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-	<script src="vendor/bootstrap/popper.min.js"></script>
-	<script src="vendor/bootstrap/bootstrap.min.js"></script>
-	<script src="vendor/select2/select2.min.js "></script>
-	<script src="vendor/owlcarousel/owl.carousel.min.js"></script>
-	<script src="vendor/isotope/isotope.min.js"></script>
-	<script src="vendor/lightcase/lightcase.js"></script>
-	<script src="vendor/waypoints/waypoint.min.js"></script>
-	<script src="vendor/countTo/jquery.countTo.js"></script>
+    </header>
 
-	<!-- Main JS -->
-	<script src="js/app.min.js "></script>
-	<script src="//localhost:35729/livereload.js"></script>
+    <!-- HERO & SCROLL SECTION (5000px height for ultra-smooth animation) -->
+    <main>
+        <section class="scroll-section" id="interactive-hero">
+            <!-- STICKY CONTAINER FOR CANVAS & OVERLAYS -->
+            <div class="sticky-container">
+
+                <!-- Canvas sized at 1920x1080 internally, styled to fill viewport -->
+                <canvas id="animation-canvas" width="1920" height="1080"></canvas>
+
+                <!-- HUD Scanlines & Grid Overlay to enhance the futuristic depth -->
+                <div class="hud-overlay"></div>
+                <div class="hud-grid"></div>
+
+                <!-- 1. Hero Headline (Visible at the top/intro) -->
+                <div class="content-overlay intro-overlay active" id="overlay-intro">
+                    <h1 class="glow-text">Topsham Tech<br><span class="cyan-glow">IT Support & Advice</span></h1>
+                    <p class="scroll-indicator">Scroll down to explore <span class="arrow">↓</span></p>
+                </div>
+
+                <!-- Cinematic Storytelling Overlay Texts (Fades in/out on scroll) -->
+                <div class="content-overlay story-overlay" id="overlay-story-1">
+                    <div class="glass-card">
+                        <span class="card-tag">TECH CHALLENGES</span>
+                        <h2>Do you struggle with Tech?</h2>
+                        <p>If you find it hard to navigate the world of technology, I'm here to help. I can assist with
+                            simple things like setting up your devices and troubleshooting issues, all the way to code
+                            training and security.</p>
+                    </div>
+                </div>
+
+                <div class="content-overlay story-overlay" id="overlay-story-2">
+                    <div class="glass-card">
+                        <span class="card-tag">INDEPENDENT</span>
+                        <h2>IT Support & Advice</h2>
+                        <p>I'm an independent IT consultant aiming to provide direct, friendly support and advice to
+                            individuals and small businesses.</p>
+                    </div>
+                </div>
+
+                <div class="content-overlay story-overlay" id="overlay-story-3">
+                    <div class="glass-card">
+                        <span class="card-tag">EXPERTISE</span>
+                        <h2>35+ Years of Experience</h2>
+                        <p>Whether you are struggling to keep up with technology and just want some friendly advice, or
+                            you are thinking of setting up a new online business and don't know where to start, I'm here
+                            to help.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SERVICES & DETAILS SECTION (Revealed below the scroll animation) -->
+        <section class="details-section" id="services">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Support & Advice Modules</h2>
+                    <p class="section-subtitle">Straightforward assistance tailored to your specific requirements,
+                        without the complex jargon.</p>
+                </div>
+
+                <!-- Premium Glassmorphic Service Grid (6 items matching the old features) -->
+                <div class="services-grid">
+                    <div class="service-card glass-card hover-glow">
+                        <div class="service-icon">⚙️</div>
+                        <h3>IT Support</h3>
+                        <p>Friendly support in setting up your devices and resolving computer, network, or hardware
+                            issues.</p>
+                    </div>
+
+                    <div class="service-card glass-card hover-glow">
+                        <div class="service-icon">💬</div>
+                        <h3>Advice</h3>
+                        <p>Providing expert, independent advice on IT solutions both for domestic setups and small
+                            businesses.</p>
+                    </div>
+
+                    <div class="service-card glass-card hover-glow">
+                        <div class="service-icon">👍</div>
+                        <h3>Keep it Simple</h3>
+                        <p>My core mission is to provide clear, straightforward guidance and explanations without the
+                            confusing tech jargon.</p>
+                    </div>
+
+                    <div class="service-card glass-card hover-glow">
+                        <div class="service-icon">🔒</div>
+                        <h3>Security</h3>
+                        <p>Helping you understand the do's and don'ts of cyber safety, ensuring you, your family, or
+                            business stays secure.</p>
+                    </div>
+
+                    <div class="service-card glass-card hover-glow">
+                        <div class="service-icon">💾</div>
+                        <h3>Data Protection</h3>
+                        <p>Assistance on setting up backups and advising on how to protect your important data and keep
+                            it safe from loss.</p>
+                    </div>
+
+                    <div class="service-card glass-card hover-glow">
+                        <div class="service-icon">💻</div>
+                        <h3>Websites</h3>
+                        <p>Advising on industry best practices for designing, launching, optimizing, and maintaining
+                            your website.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text-content">
+                        <span class="section-tag">THE MISSION</span>
+                        <h2 class="section-title text-left">Friendly Support meets Decades of Experience</h2>
+                        <p>Technology moves at a rapid pace, and keeping up can be daunting. I've worked in IT for over
+                            35 years and I'm here to help make it easier. Whether you need assistance setting up your
+                            devices, resolving issues, or have questions about technology, I provide clear,
+                            straightforward guidance without the confusing tech jargon. I offer a personalised,
+                            one-on-one consulting
+                            experience backed by extensive industry experience. You can rely on independent assistance
+                            tailored to your specific requirements.
+                        </p>
+
+                        <div class="stats-container">
+                            <div class="stat-item">
+                                <span class="stat-number">35+<span class="stat-unit">Yrs</span></span>
+                                <span class="stat-label">Professional Experience</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">100<span class="stat-unit">%</span></span>
+                                <span class="stat-label">Independent Advice</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">0<span class="stat-unit">Jargon</span></span>
+                                <span class="stat-label">Clear Communication</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-card-visual">
+                        <div class="visual-glow-ring"></div>
+                        <div class="glass-card tech-hud">
+                            <div class="hud-header">
+                                <span class="hud-dot red"></span>
+                                <span class="hud-dot yellow"></span>
+                                <span class="hud-dot green"></span>
+                                <span class="hud-title">SYSTEM_MONITOR.SH</span>
+                            </div>
+                            <div class="hud-console">
+                                <p class="console-line text-green">[OK] Direct Support Pipeline: ONLINE</p>
+                                <p class="console-line text-green">[OK] Local Backup System: PROTECTED</p>
+                                <p class="console-line text-cyan">[INFO] 35+ years experience index synced.</p>
+                                <p class="console-line text-yellow">[WARN] Tech jargon filter active: 100% suppression.
+                                </p>
+                                <p class="console-line cursor-line">Waiting for query<span class="cursor">_</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION (Subheading and glowing cyan CTA button) -->
+        <section class="cta-section" id="cta">
+            <div class="cta-background-glow"></div>
+            <div class="container text-center relative-z">
+                <h2 class="cta-title">Need some friendly IT assistance?</h2>
+                <p class="cta-subheading">Click below to send a secure message, or email directly at
+                    <strong><a href="mailto:info@topshamtech.co.uk">info@topshamtech.co.uk</a></strong>.
+                </p>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn btn-cyan-glow btn-lg" id="cta-button">
+                        <span class="btn-text">Contact Me</span>
+                        <span class="btn-glow-layer"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Topsham Tech. All Rights Reserved. Engineered for direct assistance.</p>
+                <p><a href="https://www.facebook.com/topshamtechuk"><img src="./images/facebook-logo.png" width="50"
+                            alt="Facebook"></a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,14 @@
+{
+  "name": "topsham-tech-website",
+  "version": "1.0.0",
+  "description": "Futuristic 3D scroll-linked animation website for Topsham Tech",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
+  }
+}
