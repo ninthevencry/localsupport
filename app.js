@@ -5,6 +5,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Config
     const totalFrames = 240;
+    const frameStep = 2; // Load every other frame
+    const loadedFramesCount = Math.ceil(totalFrames / frameStep); // 120 frames
     const canvas = document.getElementById('animation-canvas');
     const ctx = canvas.getContext('2d');
     const loader = document.getElementById('loader');
@@ -12,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loaderPercentage = document.getElementById('loader-percentage');
     const loaderSubtext = document.getElementById('loader-subtext');
     const scrollSection = document.querySelector('.scroll-section');
-    
+
     // Status text templates for cybernetic loading vibe
     const loadingStatuses = [
         { pct: 0, text: "CONNECTING TO TOPSHAM TECH HOLOGRAPHIC STORAGE..." },
@@ -82,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return `images/animation/ezgif-frame-${paddedIndex}.jpg`;
     }
 
-    // Preload all 240 images
+    // Preload every other frame (1, 3, 5, ... 239) — 120 frames total
     function preloadImages() {
         return new Promise((resolve) => {
             // Load the first frame immediately so we have it rendered
@@ -93,10 +95,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 drawFrame(1); // Draw frame 1 instantly behind the preloader
             };
 
-            for (let i = 1; i <= totalFrames; i++) {
+            for (let i = 1; i <= totalFrames; i += frameStep) {
                 const img = new Image();
                 img.src = getFramePath(i);
-                
+
                 img.onload = () => {
                     images[i] = img;
                     onFrameLoaded(resolve);
@@ -114,12 +116,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function onFrameLoaded(resolve) {
         loadedCount++;
-        const pct = Math.floor((loadedCount / totalFrames) * 100);
-        
+        const pct = Math.floor((loadedCount / loadedFramesCount) * 100);
+
         // Update loader progress bar & percentage UI
         progressBar.style.width = `${pct}%`;
         loaderPercentage.textContent = `${pct}%`;
-        
+
         // Update cybernetic terminal message
         let currentStatus = loadingStatuses[0].text;
         for (let status of loadingStatuses) {
@@ -127,19 +129,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentStatus = status.text;
             }
         }
-        loaderSubtext.textContent = `${currentStatus} [${loadedCount}/${totalFrames}]`;
+        loaderSubtext.textContent = `${currentStatus} [${loadedCount}/${loadedFramesCount}]`;
 
-        if (loadedCount === totalFrames) {
+        if (loadedCount === loadedFramesCount) {
             imagesPreloaded = true;
             resolve();
         }
     }
 
-    // Draw single frame on canvas
+    // Draw single frame on canvas — snaps to nearest loaded frame
     function drawFrame(index) {
-        const img = images[index];
+        // Snap to nearest loaded frame (every frameStep frames)
+        const snappedIndex = Math.round((index - 1) / frameStep) * frameStep + 1;
+        const clampedIndex = clamp(snappedIndex, 1, totalFrames);
+        const img = images[clampedIndex];
         if (!img) return;
-        
+
         // Canvas sized at 1920x1080. Since we use CSS object-fit: cover on the canvas,
         // we can simply draw the image directly at native size.
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -156,11 +161,11 @@ document.addEventListener('DOMContentLoaded', () => {
         overlays.forEach(overlay => {
             const opacity = overlay.calcOpacity(progress);
             overlay.element.style.opacity = opacity;
-            
+
             // Adjust pointer events & classes
             if (opacity > 0.01) {
                 overlay.element.classList.add('active');
-                
+
                 // Add vertical shift for subtle parallax transition
                 const translateShift = (1 - opacity) * 30; // 30px translation range
                 if (overlay.element.id === 'overlay-intro') {
@@ -181,17 +186,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const rect = scrollSection.getBoundingClientRect();
         const sectionTop = scrollSection.offsetTop;
         const sectionHeight = scrollSection.offsetHeight;
-        
+
         // Available scroll range for the animation
         const scrollRange = sectionHeight - window.innerHeight;
-        
+
         // Calculate current progress relative to when scroll container enters viewport
         const relativeScroll = window.scrollY - sectionTop;
         const progress = clamp(relativeScroll / scrollRange, 0, 1);
-        
+
         // Map progress to target frame index (1 to 240)
         targetFrame = Math.floor(progress * (totalFrames - 1)) + 1;
-        
+
         // Update the textual layers
         updateOverlays(progress);
     }
@@ -201,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (imagesPreloaded) {
             // Smoothly interpolate current frame to target frame
             const diff = targetFrame - currentFrame;
-            
+
             if (Math.abs(diff) > 0.05) {
                 currentFrame += diff * ease;
                 drawFrame(Math.round(currentFrame));
@@ -217,19 +222,19 @@ document.addEventListener('DOMContentLoaded', () => {
     async function init() {
         // Start preloading images
         await preloadImages();
-        
+
         // Hide preloader overlay with fade transition
         loader.classList.add('fade-out');
         canvas.classList.add('ready');
-        
+
         // Initial draw and trigger initial scroll position assessment
         handleScroll();
         drawFrame(1);
-        
+
         // Add scroll and resize listeners
         window.addEventListener('scroll', handleScroll, { passive: true });
         window.addEventListener('resize', handleScroll);
-        
+
         // Start the requestAnimationFrame draw loop
         requestAnimationFrame(renderLoop);
     }
